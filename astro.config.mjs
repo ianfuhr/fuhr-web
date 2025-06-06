@@ -1,8 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+import { defineConfig } from 'astro/config'
+import tailwind from "@astrojs/tailwind"
+
+export default defineConfig({
+  integrations: [tailwind()]
+})
