@@ -11,15 +11,15 @@
     </a>
   </div>
 
-  <!-- isotipo giratorio -->
-  <img id="iso-spin" src="/images/hero.jpg" alt="Isotipo FUHR" class="absolute w-64 md:w-80 bottom-10 md:bottom-16 right-1/2 translate-x-1/2 opacity-20 pointer-events-none" />
+  <!-- isotipo giratorio centrado -->
+  <img id="iso-spin" src="/images/hero.jpg" alt="Isotipo FUHR" class="absolute w-64 md:w-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
   <script>
     const img = document.getElementById('iso-spin');
     const maxRot = 360; // rotación máxima
     window.addEventListener('scroll', () => {
       const progress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      img.style.transform = `translateX(50%) rotate(${progress * maxRot}deg)`;
+      img.style.transform = `translate(-50%, -50%) rotate(${progress * maxRot}deg)`;
     });
   </script>
 </section>
