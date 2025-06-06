@@ -1,4 +1,8 @@
 {
+  "engines": {
+  "node": ">=20.0.0"
+  },
+  
   "name": "fuhr-web",
   "type": "module",
   "version": "0.0.1",
