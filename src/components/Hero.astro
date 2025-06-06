@@ -1,4 +1,25 @@
 <section class="min-h-screen relative flex flex-col justify-center items-center text-center bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 overflow-hidden">
+  <div class="max-w-2xl w-full space-y-6 z-10">
+    <p class="text-green-800 font-semibold text-sm tracking-widest uppercase">BIENVENIDO A</p>
+    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-darkBlue">
+      FUHR MARKETING
+    </h1>
+  </div>
+
+  <!-- Isotipo giratorio perfectamente centrado y a color -->
+  <img id="iso-spin" src="/images/hero.jpg" alt="Isotipo FUHR" class="absolute w-64 md:w-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none" />
+
+  <script>
+    const img = document.getElementById('iso-spin');
+    const maxRot = 360;
+    window.addEventListener('scroll', () => {
+      const progress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      img.style.transform = `translate(-50%, -50%) rotate(${progress * maxRot}deg)`;
+    });
+  </script>
+</section>
+```astro
+<section class="min-h-screen relative flex flex-col justify-center items-center text-center bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 overflow-hidden">
   <div class="max-w-2xl w-full space-y-8 z-10">
     <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-darkBlue">
       Hacemos crecer tu negocio local con <span class="text-primary">marketing digital</span>
