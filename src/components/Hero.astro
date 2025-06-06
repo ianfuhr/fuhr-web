@@ -1,16 +1,20 @@
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white">
-  <div class="max-w-2xl w-full space-y-6">
-    <img src="/hero.jpg" alt="Logo FUHR" class="h-14 mx-auto mb-6" />
-    <h1 class="text-4xl md:text-5xl font-bold text-darkBlue leading-tight">
+```astro
+<section class="max-w-screen-xl mx-auto px-6 py-20 grid md:grid-cols-2 items-center gap-12">
+  <div class="flex flex-col gap-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-darkBlue leading-tight">
       Hacemos crecer tu negocio local con <span class="text-primary">marketing digital</span>
     </h1>
     <p class="text-lg text-darkBlue/80">
-      Sitios web, SEO y campañas que convierten. Sin complicaciones. Solo resultados.
+      Especialistas en Google Ads, SEO y sitios web orientados a resultados.
     </p>
-    <div class="flex justify-center mt-6">
-      <a href="https://wa.me/569XXXXXXXX" class="bg-primary text-white px-6 py-3 rounded-md shadow-md hover:scale-105 transition">
-        Agenda una llamada
-      </a>
-    </div>
+    <a
+      href="https://wa.me/569XXXXXXXX"
+      class="w-max bg-primary text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition"
+    >
+      Agenda una llamada
+    </a>
+  </div>
+  <div class="flex justify-center">
+    <img src="/logo.svg" alt="Logo FUHR" class="h-48 md:h-64 animate-fade-in" />
   </div>
 </section>
