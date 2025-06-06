@@ -1,20 +1,25 @@
-```astro
-<section class="max-w-screen-xl mx-auto px-6 py-20 grid md:grid-cols-2 items-center gap-12">
-  <div class="flex flex-col gap-6">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-darkBlue leading-tight">
+<section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 overflow-hidden">
+  <div class="max-w-2xl w-full space-y-8 z-10">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-darkBlue">
       Hacemos crecer tu negocio local con <span class="text-primary">marketing digital</span>
     </h1>
-    <p class="text-lg text-darkBlue/80">
-      Especialistas en Google Ads, SEO y sitios web orientados a resultados.
+    <p class="text-lg md:text-xl text-darkBlue/80">
+      Sitios web, SEO y campañas que convierten.<br />Sin complicaciones. Solo resultados.
     </p>
-    <a
-      href="https://wa.me/569XXXXXXXX"
-      class="w-max bg-primary text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition"
-    >
+    <a href="https://wa.me/569XXXXXXXX" class="inline-block bg-primary text-white px-8 py-3 rounded-md shadow-md hover:scale-105 transition">
       Agenda una llamada
     </a>
   </div>
-  <div class="flex justify-center">
-    <img src="/logo.svg" alt="Logo FUHR" class="h-48 md:h-64 animate-fade-in" />
-  </div>
+
+  <!-- isotipo giratorio -->
+  <img id="iso-spin" src="/images/hero.jpg" alt="Isotipo FUHR" class="absolute w-64 md:w-80 bottom-10 md:bottom-16 right-1/2 translate-x-1/2 opacity-20 pointer-events-none" />
+
+  <script>
+    const img = document.getElementById('iso-spin');
+    const maxRot = 360; // rotación máxima
+    window.addEventListener('scroll', () => {
+      const progress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      img.style.transform = `translateX(50%) rotate(${progress * maxRot}deg)`;
+    });
+  </script>
 </section>
